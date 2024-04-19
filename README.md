@@ -28,5 +28,7 @@ For this project you need Jetson Orin NX 16GB, this project will use RAM at a pe
 ```python3 main.py```
 
 # Result 
+The blue text is the context search from ChromaDB will be the context of the question
+
 [![Alt text](https://img.youtube.com/vi/k9qjws10oMA/0.jpg)](https://youtu.be/k9qjws10oMA)
 
