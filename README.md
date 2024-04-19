@@ -26,3 +26,6 @@ For this project you need Jetson Orin NX 16GB, this project will use RAM at a pe
 ## step 3: run the project
 
 ```python3 main.py```
+
+# Result 
+!
