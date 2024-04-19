@@ -28,4 +28,4 @@ For this project you need Jetson Orin NX 16GB, this project will use RAM at a pe
 ```python3 main.py```
 
 # Result 
-![](./simRAG.mkv)
+![](https://github.com/Seeed-Projects/RAG_based_on_Jetson/blob/main/simRAG.mkv)
