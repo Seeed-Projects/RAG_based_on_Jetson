@@ -28,4 +28,5 @@ For this project you need Jetson Orin NX 16GB, this project will use RAM at a pe
 ```python3 main.py```
 
 # Result 
-![](https://youtu.be/k9qjws10oMA)
+[![Alt text](https://img.youtube.com/vi/k9qjws10oMA/0.jpg)](https://youtu.be/k9qjws10oMA)
+
