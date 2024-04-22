@@ -11,7 +11,7 @@ For this project you need Jetson Orin NX 16GB, this project will use RAM at a pe
 
 ```cd jetson-containers pip install -r requirements.txt && cd data```
 
-```git clone https://github.com/Seeed-Projects/RAG_based_on_Jetson.git```
+```git clone https://github.com/Seeed-Projects/RAG_based_on_Jetson.git && sudo apt-get install git-lfs```
 
 ```cd RAG_based_on_Jetson && git clone https://huggingface.co/JiahaoLi/llama2-7b-MLC-q4f16-jetson-containers && cd ..```
 
