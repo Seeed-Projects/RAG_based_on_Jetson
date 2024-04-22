@@ -7,25 +7,47 @@ For this project you need Jetson Orin NX 16GB, this project will use RAM at a pe
 # Run this project
 ## Step 1: prepare environment
 
-```git clone --depth=1 https://github.com/dusty-nv/jetson-containers```
+```
+# install jetson-container and its requirements
 
-```cd jetson-containers pip install -r requirements.txt && cd data```
+git clone --depth=1 https://github.com/dusty-nv/jetson-containers
+cd jetson-containers 
+pip install -r requirements.txt 
+cd data
+```
 
-```git clone https://github.com/Seeed-Projects/RAG_based_on_Jetson.git && sudo apt-get install git-lfs```
+```
+# Install RAG project and llama2-7b model after 4bit quantification
 
-```cd RAG_based_on_Jetson && git clone https://huggingface.co/JiahaoLi/llama2-7b-MLC-q4f16-jetson-containers && cd ..```
+git clone https://github.com/Seeed-Projects/RAG_based_on_Jetson.git 
+sudo apt-get install git-lfs
+cd RAG_based_on_Jetson
+git clone https://huggingface.co/JiahaoLi/llama2-7b-MLC-q4f16-jetson-containers 
+cd ..
+```
 
 ## Step 2: run and enter the docker 
 
 ```cd .. && ./run.sh $(./autotag mlc) ```
 
-```cd data/RAG_based_on_Jetson && pip install -r requirements.txt```
+![](./source/enter_docker.png)
+```
+# Those command will run in this docker 
+cd data/RAG_based_on_Jetson && pip install -r requirements.txt
+pip install chromadb==0.3.29
+```
 
-``` pip install chromadb==0.3.29```
+>Note: If you get this error please ignore it.
+
+![](./source/error.png)
 
 ## step 3: run the project
 
-```python3 main.py```
+```
+# Command run in docker 
+python3 main.py
+```
+![](./source/RAG.png)
 
 # Result 
 The blue text is the context search from ChromaDB will be the context of the question

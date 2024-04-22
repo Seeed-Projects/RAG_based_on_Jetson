@@ -11,13 +11,9 @@ import chromadb
 
 # load LLM model quantified with MLC 4bit
 llm = ChatModule(
-    model="/data/Local_RAG/llama2-7b-MLC-q4f16-jetson-containers/params",
-    model_lib_path="/data/Local_RAG/llama2-7b-MLC-q4f16-jetson-containers/Llama-2-7b-chat-hf-q4f16_ft-cuda.so"
+    model="/data/RAG_based_on_Jetson/llama2-7b-MLC-q4f16-jetson-containers/params",
+    model_lib_path="/data/RAG_based_on_Jetson/llama2-7b-MLC-q4f16-jetson-containers/Llama-2-7b-chat-hf-q4f16_ft-cuda.so"
     )
-
-# llm = ChatModule(
-#         model="/data/models/mlc/dist/Llama-2-7b-chat-hf-q4f16_ft/params",
-#         model_lib_path="/data/models/mlc/dist/Llama-2-7b-chat-hf-q4f16_ft/Llama-2-7b-chat-hf-q4f16_ft-cuda.so")
 
 # build document
 documents = SimpleDirectoryReader("/data/Local_RAG/data/").load_data()
