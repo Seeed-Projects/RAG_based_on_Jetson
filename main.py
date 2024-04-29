@@ -16,7 +16,7 @@ llm = ChatModule(
     )
 
 # build document
-documents = SimpleDirectoryReader("/data/Local_RAG/data/").load_data()
+documents = SimpleDirectoryReader("/data/RAG_based_on_Jetson/data/").load_data()
 
 
 # Use a Text Splitter to Split Documents
