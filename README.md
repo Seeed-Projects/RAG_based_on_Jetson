@@ -2,7 +2,7 @@
 This project has implemented the RAG function on Jetson and supports TXT and PDF document formats. It uses MLC for 4-bit quantization of the Llama2-7b model, utilizes ChromaDB as the vector database, and connects these features with Llama_Index. I hope you like this project.
 
 # Hardware Prepare
-For this project you need Jetson Orin NX 16GB, this project will use RAM at a peak of 11.7GB. For myself, I use [Recomputer J4012](https://www.seeedstudio.com/reComputer-J4012-w-o-power-adapter-p-5628.html).
+Here I use reComputer J4012 powered by NVIDIA [Jetson Orin NX 16GB](https://www.seeedstudio.com/reComputer-J4012-w-o-power-adapter-p-5628.html), this project will use RAM at a peak of 11.7GB.
 
 # Run this project
 ## Step 1: prepare environment
