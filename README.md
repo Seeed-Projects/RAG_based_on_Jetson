@@ -50,7 +50,7 @@ python3 RAG.py
 ![](./source/RAG.png)
 
 # Result 
-The blue text is the context search from ChromaDB will be the context of the question
+Below is the live demo, and the blue text is the context search from ChromaDB will be the context of the question
 
 [![Alt text](https://img.youtube.com/vi/v1SDRko5cNM/0.jpg)](https://youtu.be/v1SDRko5cNM)
 
