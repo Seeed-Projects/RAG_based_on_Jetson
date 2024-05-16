@@ -45,7 +45,7 @@ pip install chromadb==0.3.29
 
 ```
 # Command run in docker 
-python3 main.py
+python3 RAG.py
 ```
 ![](./source/RAG.png)
 
