@@ -8,6 +8,9 @@ from llama_index.vector_stores.chroma import ChromaVectorStore
 from llama_index.core.vector_stores import VectorStoreQuery
 import chromadb
 
+# hyperparameters: CHUNK_SIZE, TOP_K
+CHUNK_SIZE = 512
+TOP_K = 2
 
 # load LLM model quantified with MLC 4bit
 llm = ChatModule(
@@ -21,7 +24,7 @@ documents = SimpleDirectoryReader("/data/RAG_based_on_Jetson/data/").load_data()
 
 # Use a Text Splitter to Split Documents
 text_parser = SentenceSplitter(
-    chunk_size=256,
+    chunk_size=CHUNK_SIZE,
     # separator=" ",
 )
 text_chunks = []
@@ -68,9 +71,11 @@ while True:
         user_input = input('\033[94m' +"Prompt: " + '\033[0m')
         query_embedding = embed_model.get_query_embedding(user_input)
         query_mode = "default"
-        vector_store_query = VectorStoreQuery(query_embedding=query_embedding, similarity_top_k=4, mode=query_mode)
+        vector_store_query = VectorStoreQuery(query_embedding=query_embedding, similarity_top_k=TOP_K, mode=query_mode)
         query_result = vector_store.query(vector_store_query)
-        information = query_result.nodes[0].get_content() + query_result.nodes[1].get_content() + query_result.nodes[2].get_content() + query_result.nodes[3].get_content()
+        information = ''
+        for i in range(TOP_K):
+            information += query_result.nodes[0].get_content()
         prompt = f'You are a smart agent. A question would be asked to you and relevant information would be provided.\
     Your task is to answer the question and use the information provided. Question - {user_input}. Relevant Information - {information}'
         llm.generate(
